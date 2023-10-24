@@ -1,0 +1,163 @@
+$tamsi: #3d3d3d;
+$sviesi: #dbdfd3;
+$on-hover: #ffbd54;
+
+.grid_container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    font-family: "lequire_demoregular";
+    grid-template-areas:
+        "box1 box1 box2 box2 box2 box2 box2 box2 box2 box2 box3 box3"
+        "box4 box4 box4 box4 box4 box4 box4 box4 box4 box4 box4 box4"
+        "box5 box5 box5 box5 box5 box5 box5 box5 box5 box5 box5 box5";
+    @include laptop {
+        grid-template-areas:
+            "box1 box1 box1 box1 box1 box1 box1 box1 box1 box1 box3 box3"
+            "box4 box4 box4 box4 box4 box4 box4 box4 box4 box4 box4 box4"
+            "box5 box5 box5 box5 box5 box5 box5 box5 box5 box5 box5 box5";
+    }
+
+    .media {
+        background-color: $tamsi;
+        grid-area: box1;
+        .media_icons {
+            display: flex;
+            justify-content: center;
+            text-decoration: none;
+            list-style-type: none;
+            padding-top: 0.25rem;
+            @include laptop {
+                padding: 0.25rem 0 0.25rem 20%;
+            }
+            li {
+                margin: 0.2rem 10% 0 10%;
+                @include laptop {
+                    margin: 0.2rem 3% 0 3%;
+                }
+                svg {
+                    fill: #ffffff;
+                    transition: 0.3s;
+                }
+                svg:hover {
+                    fill: $on-hover;
+                }
+            }
+        }
+    }
+    .media_meniu {
+        @include laptop {
+            display: none;
+        }
+        background-color: $tamsi;
+        grid-area: box2;
+        .media_links {
+            padding-top: 0.2rem;
+        }
+    }
+    .rezervuota {
+        background-color: $tamsi;
+        grid-area: box3;
+    }
+    .logo {
+        background-color: $sviesi;
+        grid-area: box4;
+        text-align: center;
+    }
+    .main_nav {
+        background-color: #ffffff;
+        grid-area: box5;
+        a {
+            color: $tamsi;
+            text-decoration: none;
+            font-size: 0.7rem;
+            letter-spacing: 0.3rem;
+        }
+        a:hover {
+            color: $on-hover;
+        }
+        .drop-meniu {
+            display: none;
+            @include phone {
+                display: block;
+            }
+            position: relative;
+            padding-top: 0.1rem;
+            .drop-content {
+                list-style-type: none;
+                display: none;
+                position: absolute;
+                z-index: 1;
+                // li{
+                //     width: 500px;
+                // }
+            }
+            .dropdown_menu-6 {
+                animation: growDown 0.3s ease-in-out forwards;
+                transform-origin: top center;
+            }
+            @keyframes growDown {
+                0% {
+                    transform: scaleY(0);
+                }
+                // 80% {
+                //     transform: scaleY(1.)
+                // }
+                100% {
+                    transform: scaleY(1);
+                }
+            }
+        }
+        .drop-meniu:hover .drop-content {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            background-color: white;
+        }
+        .main-nav-item {
+            @include phone {
+                display: none;
+            }
+        }
+    }
+}
+.nav {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    @include phone {
+        // flex-direction: column;
+        justify-content: start;
+    }
+    justify-content: center;
+    @include tablet {
+        justify-content: space-around;
+    }
+    align-items: center;
+    transition: ease-in-out 0.3s;
+
+    a {
+        color: white;
+        text-decoration: none;
+        font-size: 0.7rem;
+        letter-spacing: 0.3rem;
+        transition: 0.3s;
+    }
+    a:hover {
+        color: $on-hover;
+    }
+    li {
+        margin: 0.3rem 3% 0.5rem 3%;
+        @include tablet {
+            margin: 0.3rem 0 0.5rem 0;
+        }
+    }
+}
+.nav:hover {
+    @include phone {
+        // flex-direction: column;
+        padding-bottom: 8rem;
+        // display: block;
+        // justify-content: start;
+        // align-items: flex-start;
+    }
+}

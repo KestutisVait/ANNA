@@ -1,0 +1,156 @@
+$tamsi: #3D3D3D;
+$sviesi: #dbdfd3;
+$on-hover: #ffbd54;
+
+.pre_footer_container{
+    background-color: #e0edfe;
+    display: grid;
+    grid-auto-flow: column;
+    @include tablet {
+        grid-auto-flow: row;
+    }
+    @include phone {
+        grid-auto-flow: row;
+    }
+    grid-auto-columns: 19rem;
+    @include desktop {
+        grid-auto-columns: 15.5rem;
+    }
+    @include tablet {
+        grid-auto-columns: 80%;
+    }
+    @include phone {
+        grid-auto-columns: 22rem;
+    }
+    gap: 2%;
+    justify-content: center;
+    padding: 5% 0 5%;
+    letter-spacing: 0.2rem;
+    line-height: 1rem;
+    font-size: 1rem;
+    @include desktop{
+        font-size: 0.9rem;
+        letter-spacing: 0.1rem;
+    }
+    @include laptop{
+        font-size: 0.8rem;
+        line-height: 0.8rem;
+    }
+
+
+    .pre_footer_section{
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items:start;
+
+
+        img{
+            width:250px;
+            @include desktop{
+                width: 150px;
+            }
+            @include laptop{
+                width: 150px;
+            }
+        }
+        p{
+            width: 80%;
+            @include tablet{                
+                width: 68%;
+            }
+            @include phone {                
+                width: 100%;
+            }
+
+            @include tablet{
+                margin-top: 1rem;
+                margin-bottom:1rem;
+            }
+            @include phone{
+                margin-bottom:1rem;
+            }
+        }
+
+        h3{
+            font-family: 'lequire_demoregular';
+            font-weight: 100;
+            color: $tamsi;
+            margin-bottom: 1rem;
+            @include tablet{
+                margin-bottom: 0;
+            }
+            flex-basis: 100%;
+        }
+
+        input{
+            align-self: flex-start;
+            height: 2rem;
+            border: none;
+            text-align: center;
+            flex-basis: 100%; 
+            @include tablet{
+                margin-top:1rem;
+            }           
+        }
+        .pre_footer_button{
+            align-self: flex-start;
+
+            width: fit-content;
+            padding: 0.6rem 0.8rem;
+            background-color: $tamsi;
+            align-self: center;
+            text-align: center;
+            text-decoration: none;
+            position: relative;
+            color: white;
+            font-size: 0.7rem;
+            transition: 0.3s;
+            font-family: 'lequire_demoregular';
+            margin: 1rem 0 3rem;
+            @include phone{
+                margin: 1rem 0 2rem;
+            }
+
+        }
+        .pre_footer_button:hover{
+            color: $on-hover;
+        }
+        .pre_footer_media{
+            flex-basis: 100%;
+
+            .media_icons {
+                display: flex;
+                justify-content: center;
+                text-decoration: none;
+                list-style-type: none;               
+                padding-top: 0.25rem;
+                margin-left: 10%;
+                margin: 0 auto;
+                @include phone{
+                    margin: 0 0 2rem;
+                }   
+    
+                li{
+                    margin: 0.2rem 10% 0 10%;
+                    svg{
+                        fill:$tamsi;  
+                        transition: 0.3s;
+                    }
+                    svg:hover{
+                        fill:$on-hover;
+                    }
+                }
+            }
+        }
+
+    }
+}
+// .section1{
+//     display: flex;
+//     flex-direction:column;
+//     h3{
+//        flex-grow: 1; 
+//     }
+// }

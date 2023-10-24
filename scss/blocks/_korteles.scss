@@ -1,0 +1,119 @@
+@mixin laptop {
+    @media (max-width: 992px) {
+      @content;
+    }
+  }
+  @mixin desktop {
+      @media (max-width: 1220px) {
+      @content;
+    }
+  }
+
+
+
+  
+  $tamsi: #3D3D3D;
+$sviesi: #dbdfd3;
+$on-hover: #ffbd54;
+.korteles_container{
+    background-color: $sviesi;
+    padding: 5% 0 5%;
+    @include phone{
+        padding: 5% 0 17%;
+    }
+    letter-spacing: 0.2rem;
+    line-height: 1rem;
+    @include tablet{
+        line-height: 0.6rem;
+    }
+    font-family: 'lequire_demoregular';
+    
+
+    h3{
+        text-align: center;
+        grid-column: 1/4;
+        padding-bottom: 1rem;
+        font-weight: 100;
+        color: $tamsi;
+    
+    }
+    .visos_korteles{
+        display: grid;
+        grid-template-columns: repeat(3, 19rem);
+        @include desktop{
+            grid-template-columns: repeat(3, 15rem);
+        }
+        // @include laptop{
+        //     grid-template-columns: repeat(3, 13rem);
+        // }
+        @include tablet{
+            grid-template-columns: repeat(3, 9rem);
+        }
+        @include phone{
+            grid-template-columns: repeat(1, 22rem);
+        }
+        grid-template-rows: max-content;
+        @include phone{
+            grid-template-rows: repeat(4, max-content);
+        }
+        justify-content: center;
+        gap: 2%;
+    
+    
+    
+        .kortele_img{
+            height: 19rem;
+            @include desktop{
+                height: 15rem;
+            }
+            // @include laptop{
+            //     height: 13rem;
+            // }
+            @include tablet{
+                height: 9rem;
+            }
+            @include phone{
+                height: 22rem;
+            }
+            background-color: $tamsi;
+        }
+        .kortele_button{
+            width: 100%;
+            height: 5rem;
+            @include desktop{
+                height: 4rem;
+            }
+            // @include laptop{
+            //     height: 3rem;
+            // }
+            @include tablet{
+                height: 3rem;
+            }
+            @include phone{
+                height:6rem;
+            }
+            background-color: rgb(255, 255, 255);
+            position: relative;
+            transition: 0.3s;
+            transition: 0.3s;
+    
+            a{
+                text-decoration: none;
+                color:$tamsi;
+                font-size: 0.7rem;
+                position: absolute;
+                top:  50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                padding: 0.5rem 0 0.5rem;
+                transition: 0.3s;
+            }
+            
+        }
+        .kortele_button:hover{
+            background-color: $on-hover;
+        }
+    
+    }
+}

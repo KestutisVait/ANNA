@@ -1,0 +1,78 @@
+$tamsi: #3D3D3D;
+$sviesi: #dbdfd3;
+$on-hover: #ffbd54;
+
+.footer_container{
+    // height: 3rem;
+    background-color: $tamsi;
+    font-size: 0.7rem;
+    font-family: 'lequire_demoregular';
+    letter-spacing: 0.2rem;
+    line-height: 1rem;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    align-items: center;
+    padding: 1rem;
+    grid-template-areas: 
+    "f1 f1 f1 f1 f2 f2 f2 f2 f2 f3 f3 f3 ";
+    @include tablet{
+        grid-template-areas: 
+        "f1 f1 f1 f1 f1 f1 f1 f1 f1 f3 f3 f3 "
+        "f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 ";
+    }   
+    @include phone{
+        grid-template-areas: 
+        "f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 "
+        "f1 f1 f1 f1 f1 f1 f1 f1 f1 f1 f1 f1 "
+        "f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 "
+        ;
+    }   
+    // @include desktop{
+    //     padding: 1rem 0.5rem;
+    // }
+    // // @include laptop{
+    // //     width: 150px;
+    // // }
+
+    .copywright{
+        color: $sviesi;
+        grid-area: f1;
+        text-align: start;
+        @include phone{
+            text-align: center;
+         }   
+
+        @include tablet{
+           align-self: flex-start;
+        }   
+        @include phone{
+           align-self: flex-start;
+        }   
+    }
+    .designer{
+        color: $sviesi;
+        grid-area: f2;
+        text-align: start;
+        @include phone{
+            text-align: center;
+         }   
+
+    }
+
+    .back_to_top{
+        grid-area: f3;
+        color: $sviesi;
+        font-size: 0.8rem;
+        text-decoration: none;
+        text-align: end;
+        @include phone{
+            text-align: center;
+            margin: 2rem 0;
+         } 
+         transition: 0.3s;  
+
+    }
+    .back_to_top:hover{
+        color: $on-hover;
+    }
+}
