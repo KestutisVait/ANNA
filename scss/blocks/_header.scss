@@ -27,7 +27,13 @@ $on-hover: #ffbd54;
             list-style-type: none;
             padding-top: 0.25rem;
             @include laptop {
-                padding: 0.25rem 0 0.25rem 20%;
+                padding: 0.25rem 0 0.25rem 25%;
+            }
+            @include tablet {
+                padding: 0.25rem 0 0.25rem 28%;
+            }
+            @include phone {
+                padding: 0.25rem 0 0.25rem 35%;
             }
             li {
                 margin: 0.2rem 10% 0 10%;
@@ -79,6 +85,8 @@ $on-hover: #ffbd54;
             display: none;
             @include phone {
                 display: block;
+                flex-direction: column;
+                // align-items:baseline;
             }
             position: relative;
             padding-top: 0.1rem;
@@ -100,7 +108,7 @@ $on-hover: #ffbd54;
                     transform: scaleY(0);
                 }
                 // 80% {
-                //     transform: scaleY(1.)
+                //     transform: scaleY(0.6)
                 // }
                 100% {
                     transform: scaleY(1);
@@ -110,8 +118,13 @@ $on-hover: #ffbd54;
         .drop-meniu:hover .drop-content {
             display: flex;
             flex-direction: column;
-            align-items: start;
+            align-items: center;
             background-color: white;
+            li{
+                text-align: center;
+                margin-left: -1.6rem;
+
+            }
         }
         .main-nav-item {
             @include phone {
@@ -125,8 +138,8 @@ $on-hover: #ffbd54;
     display: flex;
     flex-direction: row;
     @include phone {
-        // flex-direction: column;
-        justify-content: start;
+        flex-direction: column;
+        // justify-content: start;
     }
     justify-content: center;
     @include tablet {
@@ -154,10 +167,11 @@ $on-hover: #ffbd54;
 }
 .nav:hover {
     @include phone {
-        // flex-direction: column;
-        padding-bottom: 8rem;
-        // display: block;
-        // justify-content: start;
-        // align-items: flex-start;
+        padding-bottom: 8.4rem;
+        // .drop-meniu li{
+        //     margin-left: -0.5px;
+        //     text-align: center;
+            
+        // }
     }
 }

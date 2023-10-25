@@ -42,7 +42,17 @@
 }
 @media (max-width: 992px) {
   .grid_container .media .media_icons {
-    padding: 0.25rem 0 0.25rem 20%;
+    padding: 0.25rem 0 0.25rem 25%;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .grid_container .media .media_icons {
+    padding: 0.25rem 0 0.25rem 28%;
+  }
+}
+@media (max-width: 480px) {
+  .grid_container .media .media_icons {
+    padding: 0.25rem 0 0.25rem 35%;
   }
 }
 .grid_container .media .media_icons li {
@@ -102,6 +112,7 @@
 @media (max-width: 480px) {
   .grid_container .main_nav .drop-meniu {
     display: block;
+    flex-direction: column;
   }
 }
 .grid_container .main_nav .drop-meniu .drop-content {
@@ -125,8 +136,12 @@
 .grid_container .main_nav .drop-meniu:hover .drop-content {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
   background-color: white;
+}
+.grid_container .main_nav .drop-meniu:hover .drop-content li {
+  text-align: center;
+  margin-left: -1.6rem;
 }
 @media (max-width: 480px) {
   .grid_container .main_nav .main-nav-item {
@@ -144,7 +159,7 @@
 }
 @media (max-width: 480px) {
   .nav {
-    justify-content: start;
+    flex-direction: column;
   }
 }
 @media (min-width: 481px) and (max-width: 768px) {
@@ -173,7 +188,7 @@
 
 @media (max-width: 480px) {
   .nav:hover {
-    padding-bottom: 8rem;
+    padding-bottom: 8.4rem;
   }
 }
 
@@ -535,6 +550,7 @@
   text-align: center;
   font-family: "lequire_demoregular";
   font-weight: 100;
+  line-height: 2rem;
 }
 .txt_sekcija p {
   color: #3D3D3D;
