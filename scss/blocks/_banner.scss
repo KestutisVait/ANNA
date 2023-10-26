@@ -33,7 +33,7 @@
                 margin:2rem 0 1rem
             }
             font-size: 1rem;
-            font-weight: 100;
+            font-weight: 600;
         }
         p{
             color: $tamsi;
@@ -52,6 +52,8 @@
             transition: 0.3s;
             text-decoration: none;
             font-size: 0.7rem;
+            font-weight: 600;
+
         }
         .button:hover{
             color: $on-hover;
@@ -72,13 +74,15 @@ $on-hover: #ffbd54;
         overscroll-behavior-inline: contain;
         scroll-snap-type:  x mandatory;
         scroll-behavior: smooth;
-        font-family: 'lequire_demoregular';        
-        
+        font-family: 'Wix Madefor Text', sans-serif;
+        letter-spacing: 0.3rem;
+        line-height: 0.5rem;
+
         .slider_items{
             width: 100%;
             height: 20rem;
             @include phone{
-                height: 25rem;
+                height: 22.5rem;
             }
             scroll-snap-align: start;
             letter-spacing: 0.2rem;

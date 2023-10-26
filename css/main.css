@@ -1,12 +1,8 @@
-@font-face {
-  font-family: "lequire_demoregular";
-  src: url("../font/lequire-webfont.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
+@import url("https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap");
 * {
   margin: 0;
   padding: 0;
+  font-family: "Wix Madefor Text", sans-serif;
 }
 
 .wrapper {
@@ -21,7 +17,6 @@
 .grid_container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  font-family: "lequire_demoregular";
 }
 .grid_container .media {
   background-color: #3d3d3d;
@@ -55,6 +50,11 @@
 .grid_container .main_nav {
   grid-column: 1/13;
 }
+@media (max-width: 480px) {
+  .grid_container .main_nav {
+    grid-column: 6/8;
+  }
+}
 .grid_container .main_nav .nav {
   list-style-type: none;
   display: flex;
@@ -67,19 +67,26 @@
   }
 }
 .grid_container .main_nav .nav .nav_item {
-  margin: 0.7rem 3% 0.5rem;
+  margin: 0.6rem 3%;
+  font-family: "Wix Madefor Text", sans-serif;
+  font-weight: 600;
   font-size: 0.7rem;
   letter-spacing: 0.3rem;
+  line-height: 0.5rem;
 }
 @media (min-width: 481px) and (max-width: 768px) {
   .grid_container .main_nav .nav .nav_item {
-    margin: 0.7rem 2% 0.5rem;
+    margin: 0.6rem 2%;
     letter-spacing: 0.2rem;
   }
+}
+.grid_container .main_nav .nav .nav_item svg {
+  fill: black;
 }
 .grid_container .main_nav .nav .nav_item a {
   color: #3d3d3d;
   text-decoration: none;
+  transition: 0.3s;
 }
 .grid_container .main_nav .nav .nav_item a:hover {
   color: #ffbd54;
@@ -98,6 +105,9 @@
   position: absolute;
   display: none;
   z-index: 1;
+}
+.grid_container .main_nav .nav .drop_menu .drop_content li:first-child {
+  padding-top: 0.5rem;
 }
 .grid_container .main_nav .nav .drop_menu .dropdown_menu {
   animation: growDown 0.3s ease-in-out forwards;
@@ -121,7 +131,7 @@
 }
 @media (max-width: 480px) {
   .grid_container .nav:hover {
-    padding-bottom: 8.4rem;
+    padding-bottom: 8.7rem;
   }
 }
 
@@ -136,7 +146,9 @@
   overscroll-behavior-inline: contain;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  font-family: "lequire_demoregular";
+  font-family: "Wix Madefor Text", sans-serif;
+  letter-spacing: 0.3rem;
+  line-height: 0.5rem;
 }
 .banner_container .slider .slider_items {
   width: 100%;
@@ -148,7 +160,7 @@
 }
 @media (max-width: 480px) {
   .banner_container .slider .slider_items {
-    height: 25rem;
+    height: 22.5rem;
   }
 }
 .banner_container .slider .item-1 {
@@ -193,7 +205,7 @@
   color: #3D3D3D;
   margin: 2rem;
   font-size: 1rem;
-  font-weight: 100;
+  font-weight: 600;
 }
 @media (max-width: 992px) {
   .banner_container .slider .item-1 .info-box h3 {
@@ -218,6 +230,7 @@
   transition: 0.3s;
   text-decoration: none;
   font-size: 0.7rem;
+  font-weight: 600;
 }
 .banner_container .slider .item-1 .info-box .button:hover {
   color: #ffbd54;
@@ -263,7 +276,7 @@
   color: #3D3D3D;
   margin: 2rem;
   font-size: 1rem;
-  font-weight: 100;
+  font-weight: 600;
 }
 @media (max-width: 992px) {
   .banner_container .slider .item-2 .info-box h3 {
@@ -288,6 +301,7 @@
   transition: 0.3s;
   text-decoration: none;
   font-size: 0.7rem;
+  font-weight: 600;
 }
 .banner_container .slider .item-2 .info-box .button:hover {
   color: #ffbd54;
@@ -333,7 +347,7 @@
   color: #3D3D3D;
   margin: 2rem;
   font-size: 1rem;
-  font-weight: 100;
+  font-weight: 600;
 }
 @media (max-width: 992px) {
   .banner_container .slider .item-3 .info-box h3 {
@@ -358,6 +372,7 @@
   transition: 0.3s;
   text-decoration: none;
   font-size: 0.7rem;
+  font-weight: 600;
 }
 .banner_container .slider .item-3 .info-box .button:hover {
   color: #ffbd54;
@@ -395,62 +410,31 @@
 .foto_meniu_container {
   position: relative;
   background-color: #dbdfd3;
+  padding: 5%;
   display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 19rem;
+  grid-template-columns: repeat(3, 1fr);
   justify-content: center;
   align-items: center;
   gap: 2%;
-  padding: 5% 0 5%;
-  margin-top: -15px;
   letter-spacing: 0.2rem;
   line-height: 1rem;
-  font-family: "lequire_demoregular";
+  font-family: "Wix Madefor Text", sans-serif;
 }
 @media (max-width: 480px) {
   .foto_meniu_container {
-    grid-auto-flow: row;
-  }
-}
-@media (max-width: 1200px) {
-  .foto_meniu_container {
-    grid-auto-columns: 15.5rem;
-  }
-}
-@media (min-width: 481px) and (max-width: 768px) {
-  .foto_meniu_container {
-    grid-auto-columns: 9rem;
-  }
-}
-@media (max-width: 480px) {
-  .foto_meniu_container {
-    grid-auto-columns: 22rem;
-  }
-}
-@media (max-width: 480px) {
-  .foto_meniu_container {
-    padding: 5% 0 13%;
+    grid-template-columns: 1fr;
+    padding-bottom: 16%;
   }
 }
 .foto_meniu_container .foto_meniu_item {
-  height: 19rem;
-  background-color: #3d3d3d;
+  height: -moz-fit-content;
+  height: fit-content;
   position: relative;
 }
-@media (max-width: 1200px) {
-  .foto_meniu_container .foto_meniu_item {
-    height: 15.5rem;
-  }
-}
-@media (min-width: 481px) and (max-width: 768px) {
-  .foto_meniu_container .foto_meniu_item {
-    height: 9rem;
-  }
-}
-@media (max-width: 480px) {
-  .foto_meniu_container .foto_meniu_item {
-    height: 22rem;
-  }
+.foto_meniu_container .foto_meniu_item img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
 }
 .foto_meniu_container .foto_meniu_item .foto_meniu_button {
   padding: 1.5rem 2.2rem;
@@ -463,7 +447,23 @@
   transition: 0.3s;
   color: #3d3d3d;
   font-size: 0.8rem;
+  font-weight: 600;
   text-decoration: none;
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .foto_meniu_container .foto_meniu_item .foto_meniu_button {
+    padding: 0.8rem 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .foto_meniu_container .foto_meniu_item .foto_meniu_button {
+    padding: 1.5rem 2.2rem;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .foto_meniu_container .foto_meniu_item .foto_meniu_button {
+    font-size: 0.6rem;
+  }
 }
 .foto_meniu_container .foto_meniu_item .foto_meniu_button:hover {
   background-color: #ffbd54;
@@ -474,16 +474,16 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding: 5% 0 5%;
+  padding: 5%;
   letter-spacing: 0.2rem;
   line-height: 1rem;
 }
 .txt_sekcija h2 {
   color: #3D3D3D;
   text-align: center;
-  font-family: "lequire_demoregular";
-  font-weight: 100;
-  line-height: 2rem;
+  font-family: "Wix Madefor Text", sans-serif;
+  font-weight: 400;
+  line-height: 1.6rem;
 }
 .txt_sekcija p {
   color: #3D3D3D;
@@ -504,7 +504,8 @@
   color: white;
   font-size: 0.7rem;
   transition: 0.3s;
-  font-family: "lequire_demoregular";
+  font-family: "Wix Madefor Text", sans-serif;
+  font-weight: 600;
 }
 .txt_sekcija .txt_sekcija_button:hover {
   color: #ffbd54;
@@ -512,14 +513,14 @@
 
 .korteles_container {
   background-color: #dbdfd3;
-  padding: 5% 0 5%;
+  padding: 5%;
   letter-spacing: 0.2rem;
   line-height: 1rem;
-  font-family: "lequire_demoregular";
+  font-family: "Wix Madefor Text", sans-serif;
 }
 @media (max-width: 480px) {
   .korteles_container {
-    padding: 5% 0 17%;
+    padding: 5%;
   }
 }
 @media (min-width: 481px) and (max-width: 768px) {
@@ -531,54 +532,29 @@
   text-align: center;
   grid-column: 1/4;
   padding-bottom: 1rem;
-  font-weight: 100;
+  font-weight: 500;
   color: #3D3D3D;
 }
 .korteles_container .visos_korteles {
   display: grid;
-  grid-template-columns: repeat(3, 19rem);
-  grid-template-rows: max-content;
+  grid-template-columns: repeat(3, 1fr);
   justify-content: center;
   gap: 2%;
 }
-@media (max-width: 1220px) {
-  .korteles_container .visos_korteles {
-    grid-template-columns: repeat(3, 15rem);
-  }
-}
-@media (min-width: 481px) and (max-width: 768px) {
-  .korteles_container .visos_korteles {
-    grid-template-columns: repeat(3, 9rem);
-  }
-}
 @media (max-width: 480px) {
   .korteles_container .visos_korteles {
-    grid-template-columns: repeat(1, 22rem);
+    grid-template-columns: 1fr;
+    padding-bottom: 16%;
   }
 }
-@media (max-width: 480px) {
-  .korteles_container .visos_korteles {
-    grid-template-rows: repeat(4, max-content);
-  }
+.korteles_container .visos_korteles .kortele {
+  height: -moz-fit-content;
+  height: fit-content;
 }
-.korteles_container .visos_korteles .kortele_img {
-  height: 19rem;
-  background-color: #3D3D3D;
-}
-@media (max-width: 1220px) {
-  .korteles_container .visos_korteles .kortele_img {
-    height: 15rem;
-  }
-}
-@media (min-width: 481px) and (max-width: 768px) {
-  .korteles_container .visos_korteles .kortele_img {
-    height: 9rem;
-  }
-}
-@media (max-width: 480px) {
-  .korteles_container .visos_korteles .kortele_img {
-    height: 22rem;
-  }
+.korteles_container .visos_korteles .kortele img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
 }
 .korteles_container .visos_korteles .kortele_button {
   width: 100%;
@@ -588,7 +564,7 @@
   transition: 0.3s;
   transition: 0.3s;
 }
-@media (max-width: 1220px) {
+@media (max-width: 1200px) {
   .korteles_container .visos_korteles .kortele_button {
     height: 4rem;
   }
@@ -607,13 +583,19 @@
   text-decoration: none;
   color: #3D3D3D;
   font-size: 0.7rem;
+  font-weight: 600;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  padding: 0.5rem 0 0.5rem;
+  padding: 0.5rem 0;
   transition: 0.3s;
+}
+@media (max-width: 480px) {
+  .korteles_container .visos_korteles .kortele_button a {
+    font-size: 0.8rem;
+  }
 }
 .korteles_container .visos_korteles .kortele_button:hover {
   background-color: #ffbd54;
@@ -641,7 +623,7 @@
     grid-auto-flow: row;
   }
 }
-@media (max-width: 1220px) {
+@media (max-width: 1200px) {
   .pre_footer_container {
     grid-auto-columns: 15.5rem;
   }
@@ -656,7 +638,7 @@
     grid-auto-columns: 22rem;
   }
 }
-@media (max-width: 1220px) {
+@media (max-width: 1200px) {
   .pre_footer_container {
     font-size: 0.9rem;
     letter-spacing: 0.1rem;
@@ -678,7 +660,7 @@
 .pre_footer_container .pre_footer_section img {
   width: 250px;
 }
-@media (max-width: 1220px) {
+@media (max-width: 1200px) {
   .pre_footer_container .pre_footer_section img {
     width: 150px;
   }
@@ -713,8 +695,8 @@
   }
 }
 .pre_footer_container .pre_footer_section h3 {
-  font-family: "lequire_demoregular";
-  font-weight: 100;
+  font-family: "Wix Madefor Text", sans-serif;
+  font-weight: 500;
   color: #3D3D3D;
   margin-bottom: 1rem;
   flex-basis: 100%;
@@ -749,7 +731,8 @@
   color: white;
   font-size: 0.7rem;
   transition: 0.3s;
-  font-family: "lequire_demoregular";
+  font-family: "Wix Madefor Text", sans-serif;
+  font-weight: 500;
   margin: 1rem 0 3rem;
 }
 @media (max-width: 480px) {
@@ -790,68 +773,59 @@
 
 .footer_container {
   background-color: #3D3D3D;
-  font-size: 0.7rem;
-  font-family: "lequire_demoregular";
-  letter-spacing: 0.2rem;
-  line-height: 1rem;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  align-items: center;
-  padding: 1rem;
-  grid-template-areas: "f1 f1 f1 f1 f2 f2 f2 f2 f2 f3 f3 f3 ";
-}
-@media (min-width: 481px) and (max-width: 768px) {
-  .footer_container {
-    grid-template-areas: "f1 f1 f1 f1 f1 f1 f1 f1 f1 f3 f3 f3 " "f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 ";
-  }
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem;
+  font-size: 0.8rem;
+  flex-wrap: wrap;
 }
 @media (max-width: 480px) {
   .footer_container {
-    grid-template-areas: "f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 f3 " "f1 f1 f1 f1 f1 f1 f1 f1 f1 f1 f1 f1 " "f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 f2 ";
+    flex-direction: column;
+    align-items: center;
   }
 }
 .footer_container .copywright {
   color: #dbdfd3;
-  grid-area: f1;
-  text-align: start;
-}
-@media (max-width: 480px) {
-  .footer_container .copywright {
-    text-align: center;
-  }
 }
 @media (min-width: 481px) and (max-width: 768px) {
   .footer_container .copywright {
-    align-self: flex-start;
+    order: 1;
+    width: 70%;
   }
 }
 @media (max-width: 480px) {
   .footer_container .copywright {
-    align-self: flex-start;
+    order: 2;
   }
 }
 .footer_container .designer {
   color: #dbdfd3;
-  grid-area: f2;
-  text-align: start;
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .footer_container .designer {
+    order: 3;
+  }
 }
 @media (max-width: 480px) {
   .footer_container .designer {
-    text-align: center;
+    order: 3;
   }
 }
 .footer_container .back_to_top {
-  grid-area: f3;
   color: #dbdfd3;
-  font-size: 0.8rem;
   text-decoration: none;
-  text-align: end;
   transition: 0.3s;
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .footer_container .back_to_top {
+    order: 2;
+  }
 }
 @media (max-width: 480px) {
   .footer_container .back_to_top {
-    text-align: center;
-    margin: 2rem 0;
+    order: 1;
+    margin: 1rem;
   }
 }
 .footer_container .back_to_top:hover {
