@@ -70,20 +70,14 @@
                                     </g>
                                 </svg></a>
                         </li>
-                        <li class="rezervuota">
+                        <li class="rezervuota"><!-- <====== rezervuota ateiciai( cia bus pirkiniu krepselis)-->
                             <div >
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path d="M20 7h-4v-3c0-2.209-1.791-4-4-4s-4 1.791-4 4v3h-4l-2 17h20l-2-17zm-11-3c0-1.654 1.346-3 3-3s3 1.346 3 3v3h-6v-3zm-4.751 18l1.529-13h2.222v1.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h6v1.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h2.222l1.529 13h-15.502z"/></svg>
-                            </div> <!-- <====== rezervuota ateiciai( cia bus pirkiniu krepselis)-->
+                                <svg id="krepselis"xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path d="M20 7h-4v-3c0-2.209-1.791-4-4-4s-4 1.791-4 4v3h-4l-2 17h20l-2-17zm-11-3c0-1.654 1.346-3 3-3s3 1.346 3 3v3h-6v-3zm-4.751 18l1.529-13h2.222v1.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h6v1.5c0 .276.224.5.5.5s.5-.224.5-.5v-1.5h2.222l1.529 13h-15.502z"/></svg>
+                            </div>
+                            <div id="krepselio_sk">0</div> 
                         </li>
                     </ul>
                 </div>
-                <!-- <nav class="media_meniu">
-                    <ul class="nav media_links">
-                        <li><a href="#">FACEBOOK</a></li>
-                        <li><a href="#">INSTAGRAM</a></li>
-                        <li><a href="#">LINKED INN</a></li>
-                    </ul>
-                </nav> -->
                 <div class="logo">
                     <img src="./img/ANNA.svg" height="150" alt="" />
                 </div>
@@ -91,7 +85,8 @@
                     <ul class="nav">
                         <li class="nav_item drop_menu">
                             <a href="#">
-                                <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M24 18v1h-24v-1h24zm0-6v1h-24v-1h24zm0-6v1h-24v-1h24z" fill="#1040e2"/><path d="M24 19h-24v-1h24v1zm0-6h-24v-1h24v1zm0-6h-24v-1h24v1z"/></svg>                            </a>
+                                <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M24 18v1h-24v-1h24zm0-6v1h-24v-1h24zm0-6v1h-24v-1h24z" fill="#1040e2"/><path d="M24 19h-24v-1h24v1zm0-6h-24v-1h24v1zm0-6h-24v-1h24v1z"/></svg>
+                            </a>
                             <ul class="drop_content dropdown_menu">
                                 <li class="nav_item"><a href="#">PRADŽIA</a></li>
                                 <li class="nav_item"><a href="#">APIE MUS</a></li>
@@ -114,7 +109,7 @@
                 <!---------------------------BANNER----------------------------------------->
 
                 <div class="banner_container">
-                    <div class="slider">
+                    <div class="slider" id="slider">
                         <div class="slider_items item-1" id="slide-1">
                             <div class="info-box">
                                 <h3>TAPK SAVO GYVENIMO LYDERE!</h3>
@@ -144,10 +139,18 @@
                             </div>
                         </div>
                     </div>
+                    <div class="left-right">
+                        <div class="lr_button" href="" id="scroll_left">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M3 12l18-12v24z"/></svg>
+                        </div>
+                        <div class="lr_button" href="" id="scroll_right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M21 12l-18 12v-24z"/></svg>
+                        </div>
+                    </div>
                     <div class="slider_nav">
-                        <a href="#slide-1"></a>
-                        <a href="#slide-2"></a>
-                        <a href="#slide-3"></a>
+                        <a href="#slide-1" tabindex="1"></a>
+                        <a href="#slide-2" tabindex="2"></a>
+                        <a href="#slide-3" tabindex="3"></a>
                     </div>
                 </div>
                 <!-- -------------------------TEKSTINE SEKCIJA 1-------------------------------------- -->

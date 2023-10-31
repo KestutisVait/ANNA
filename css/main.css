@@ -41,6 +41,15 @@
 .grid_container .media .media_icons .rezervuota {
   background-color: #3d3d3d;
   margin-left: auto;
+  display: flex;
+}
+.grid_container .media .media_icons .rezervuota #krepselio_sk {
+  color: white;
+  padding: 0 0.3rem;
+  font-size: 1.1rem;
+}
+.grid_container .media .media_icons .rezervuota svg {
+  cursor: pointer;
 }
 .grid_container .logo {
   grid-column: 1/13;
@@ -115,8 +124,12 @@
   display: none;
   z-index: 1;
 }
+.grid_container .main_nav .nav .drop_menu .drop_content li {
+  font-size: 0.9rem;
+  padding: 0.2rem 0;
+}
 .grid_container .main_nav .nav .drop_menu .drop_content li:first-child {
-  padding-top: 0.5rem;
+  padding-top: 0.9rem;
 }
 .grid_container .main_nav .nav .drop_menu .dropdown_menu {
   animation: growDown 0.3s ease-in-out forwards;
@@ -136,11 +149,11 @@
   align-items: center;
 }
 .grid_container .main_nav .nav .drop_menu:hover .drop_content li {
-  margin-left: -2.4rem;
+  margin-left: -3.1rem;
 }
 @media (max-width: 480px) {
   .grid_container .nav:hover {
-    padding-bottom: 8.1rem;
+    padding-bottom: 10rem;
   }
 }
 
@@ -181,7 +194,7 @@
 .banner_container .slider .item-1 .info-box {
   -webkit-backdrop-filter: blur(15px);
           backdrop-filter: blur(15px);
-  width: 600px;
+  width: 60%;
   height: 200px;
   padding: 1rem;
   position: absolute;
@@ -190,16 +203,6 @@
   transform: translate(-50%, -50%);
   background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
-}
-@media (max-width: 992px) {
-  .banner_container .slider .item-1 .info-box {
-    width: 500px;
-  }
-}
-@media (min-width: 481px) and (max-width: 768px) {
-  .banner_container .slider .item-1 .info-box {
-    width: 450px;
-  }
 }
 @media (max-width: 480px) {
   .banner_container .slider .item-1 .info-box {
@@ -261,7 +264,7 @@
 .banner_container .slider .item-2 .info-box {
   -webkit-backdrop-filter: blur(15px);
           backdrop-filter: blur(15px);
-  width: 600px;
+  width: 60%;
   height: 200px;
   padding: 1rem;
   position: absolute;
@@ -270,16 +273,6 @@
   transform: translate(-50%, -50%);
   background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
-}
-@media (max-width: 992px) {
-  .banner_container .slider .item-2 .info-box {
-    width: 500px;
-  }
-}
-@media (min-width: 481px) and (max-width: 768px) {
-  .banner_container .slider .item-2 .info-box {
-    width: 450px;
-  }
 }
 @media (max-width: 480px) {
   .banner_container .slider .item-2 .info-box {
@@ -341,7 +334,7 @@
 .banner_container .slider .item-3 .info-box {
   -webkit-backdrop-filter: blur(15px);
           backdrop-filter: blur(15px);
-  width: 600px;
+  width: 60%;
   height: 200px;
   padding: 1rem;
   position: absolute;
@@ -350,16 +343,6 @@
   transform: translate(-50%, -50%);
   background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
-}
-@media (max-width: 992px) {
-  .banner_container .slider .item-3 .info-box {
-    width: 500px;
-  }
-}
-@media (min-width: 481px) and (max-width: 768px) {
-  .banner_container .slider .item-3 .info-box {
-    width: 450px;
-  }
 }
 @media (max-width: 480px) {
   .banner_container .slider .item-3 .info-box {
@@ -439,8 +422,28 @@
   opacity: 1;
 }
 .banner_container .slider_nav a:active {
-  opacity: 1;
   background-color: #ffbd54;
+}
+.banner_container .left-right {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.banner_container .left-right .lr_button {
+  margin: 0.2rem;
+  color: white;
+  font-size: 2rem;
+}
+.banner_container .left-right .lr_button svg {
+  cursor: pointer;
+  fill: #3D3D3D;
+  transition: 0.3s;
+}
+.banner_container .left-right .lr_button svg:hover {
+  fill: #ffbd54;
 }
 
 .foto_meniu_container {
@@ -743,6 +746,7 @@
   }
 }
 .pre_footer_container .pre_footer_section input {
+  max-width: 78%;
   align-self: flex-start;
   height: 2rem;
   border: none;
@@ -764,7 +768,7 @@
   text-align: center;
   text-decoration: none;
   position: relative;
-  color: white;
+  color: #fad3c8;
   font-size: 0.7rem;
   transition: 0.3s;
   font-family: "Wix Madefor Text", sans-serif;

@@ -28,7 +28,16 @@ $on-hover: #ffbd54;
             .rezervuota {
                 background-color: $tamsi;
                 margin-left: auto;
-                // visibility: hidden;
+                display: flex;
+                // visibility: hidden; 
+                #krepselio_sk{
+                    color: white;
+                    padding: 0 0.3rem;
+                    font-size: 1.1rem;
+                }
+                svg{
+                    cursor: pointer;
+                }               
             }
         }
     }      
@@ -95,8 +104,12 @@ $on-hover: #ffbd54;
                     position: absolute;
                     display: none;
                     z-index: 1;
+                    li{
+                        font-size: 0.9rem;
+                        padding: 0.2rem 0;
+                    }
                     li:first-child{
-                        padding-top: 0.5rem; 
+                        padding-top: 0.9rem; 
                     }
                 }
                 .dropdown_menu {
@@ -117,14 +130,14 @@ $on-hover: #ffbd54;
                 flex-direction: column;
                 align-items: center;
                 li{
-                    margin-left: -2.4rem;    
+                    margin-left: -3.1rem;    
                 }
             }
         }        
     }
     .nav:hover {
         @include phone {
-            padding-bottom: 8.1rem;
+            padding-bottom: 10rem;
         }
     }
 }
