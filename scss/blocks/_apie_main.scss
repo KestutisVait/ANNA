@@ -24,3 +24,8 @@ $on-hover: #ffbd54;
 
     }
 }
+footer a::after{
+    content: "\01F865";
+}
+
+// font-family: 'Zapf Dingbats';
