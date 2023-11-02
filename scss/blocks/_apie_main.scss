@@ -1,0 +1,26 @@
+$tamsi: #3D3D3D;
+$sviesi: #dbdfd3;
+$on-hover: #ffbd54;
+
+// *{
+//     margin: 0;
+//     padding: 0;
+// }
+.apie-txt{
+    height: 500px;
+    background-color: $sviesi;
+    h2{
+        font-weight: 400;
+        text-align: center;
+        padding: 1rem;
+    }
+    h4{
+        font-weight: 100;
+        text-align: center;
+    }
+    p{
+        padding: 1rem;
+        font-family: 'Wix Madefor Text', sans-serif;
+
+    }
+}

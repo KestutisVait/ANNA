@@ -106,9 +106,6 @@
 .grid_container .main_nav .nav .nav_item svg {
   fill: #3d3d3d;
 }
-.grid_container .main_nav .nav .nav_item svg:hover {
-  fill: #ffbd54;
-}
 .grid_container .main_nav .nav .drop_menu {
   position: relative;
   display: none;
@@ -870,4 +867,22 @@
 }
 .footer_container .back_to_top:hover {
   color: #ffbd54;
+}
+
+.apie-txt {
+  height: 500px;
+  background-color: #dbdfd3;
+}
+.apie-txt h2 {
+  font-weight: 400;
+  text-align: center;
+  padding: 1rem;
+}
+.apie-txt h4 {
+  font-weight: 100;
+  text-align: center;
+}
+.apie-txt p {
+  padding: 1rem;
+  font-family: "Wix Madefor Text", sans-serif;
 }/*# sourceMappingURL=main.css.map */
