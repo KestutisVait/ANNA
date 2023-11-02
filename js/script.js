@@ -28,3 +28,21 @@ document.getElementById("scroll_left").addEventListener("click", function(){
     })  
 })
 
+document.getElementById("hamburger_meniu").addEventListener("click", meniuOff)
+
+flag = true;
+
+function meniuOff(){
+    let hamburger = document.getElementById("hamburger_meniu");
+    if(hamburger.inn = flag){
+        document.getElementsByClassName("drop_content")[0].style.display = "flex";
+        // document.getElementById("hamburger_icon").style.fill = "$on-hover";
+        document.getElementsByClassName("nav")[0].style.paddingBottom = "10rem";
+
+    }else{
+        document.getElementsByClassName("drop_content")[0].style.display = "none";
+        document.getElementById("hamburger_icon").style.fill = "$tamsi";
+        document.getElementsByClassName("nav")[0].style.paddingBottom = "0";
+    }
+    flag = !flag;
+}

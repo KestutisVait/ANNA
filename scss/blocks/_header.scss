@@ -86,12 +86,12 @@ $on-hover: #ffbd54;
                     color: $on-hover;
                     
                 }
-                svg{
-                    fill:$tamsi
-                }
-                svg:hover{
-                    fill:$on-hover
-                }
+                    svg{
+                        fill:$tamsi
+                    }
+                // svg:hover{
+                //     fill:$on-hover
+                // }
             }
             .drop_menu{
                 position: relative;
