@@ -69,6 +69,7 @@ $on-hover: #ffbd54;
         overflow-x: auto;
         overscroll-behavior-inline: contain;
         scroll-snap-type:  x mandatory;
+        overscroll-behavior-x: contain;
         scroll-behavior: smooth;
         font-family: 'Wix Madefor Text', sans-serif;
         letter-spacing: 0.3rem;
