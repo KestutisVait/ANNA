@@ -19,6 +19,7 @@ $on-hover: #ffbd54;
         grid-column: 1/4;
         padding-bottom: 1rem;
         font-weight: 500;
+        line-height: 1.6rem;
         color: $tamsi;    
     }
     .visos_korteles{
@@ -31,7 +32,7 @@ $on-hover: #ffbd54;
         justify-content: center;
         gap: 2%;
         .kortele{
-            height: fit-content;
+            // height: fit-content;
             img{
                 object-fit: contain;
                 width:100%                    

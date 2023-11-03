@@ -28,6 +28,7 @@
   }
 @mixin vertical_sroll_snap {
   .wrapper{
+    overflow-x: hidden;
     overflow-y: scroll;
     overscroll-behavior-y: contain;
     overscroll-behavior-x: contain;

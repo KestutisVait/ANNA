@@ -1,8 +1,11 @@
 
 let naujienlaiskis = document.getElementById("e-mail");
 if (naujienlaiskis){
-    naujienlaiskis.addEventListener("click", () => naujienlaiskis.value = "");// paspaudus ant laukelio isnuksta tekstas, rasoma is naujo
+    naujienlaiskis.addEventListener("click", () => naujienlaiskis.value = "");// paspaudus ant laukelio isnyksta tekstas, rasoma is naujo
     document.getElementsByClassName("pre_footer_button")[0].addEventListener("click", tikrintiEmaila);
+    /**
+     * tikrinti ar ivestas tekstas yra el pastas.
+     */
     function tikrintiEmaila(){
         let regex = /.+(\W)?.*@\w+\.\w+/ig// regex sablonas tikrinti el pasto strukturai
         let txt = document.getElementById("e-mail");
@@ -10,7 +13,7 @@ if (naujienlaiskis){
             //cia bus kodas siunciantis al pasto adresa i duombaze
             console.log("El. pastas tinka")
         }else{
-            document.getElementById("e-mail").style.backgroundColor = "#fad3c8"// jei neteisingas ,nuspalvinu laukeli rausvai (klaida!).
+            document.getElementById("e-mail").style.backgroundColor = "#fad3c8"// jei neteisingai ,nuspalvinu laukeli rausvai (klaida!).
             txt.value = "Įveskite tinkamą el. pašto adresą !"
         }   
     }
@@ -36,7 +39,10 @@ function sliderControl(scroll_direction, amount){
     })
 }
 document.getElementById("hamburger_meniu").addEventListener("click", meniuOff);
-flag = true;
+var flag = true;
+/**
+ * ijungia ir isjungia paslepta meniu
+ */
 function meniuOff(){
     let hamburger = document.getElementById("hamburger_meniu");
     let mygtukai = document.getElementsByClassName("drop_content")[0];

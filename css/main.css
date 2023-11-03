@@ -7,6 +7,7 @@
 
 @media (min-width: 481px) and (max-width: 768px) {
   .wrapper {
+    overflow-x: hidden;
     overflow-y: scroll;
     overscroll-behavior-y: contain;
     overscroll-behavior-x: contain;
@@ -19,6 +20,7 @@
 }
 @media (max-width: 480px) {
   .wrapper {
+    overflow-x: hidden;
     overflow-y: scroll;
     overscroll-behavior-y: contain;
     overscroll-behavior-x: contain;
@@ -448,25 +450,26 @@
   background-color: #ffbd54;
 }
 .banner_container .left-right {
-  margin-left: -0.8rem;
-  width: 103%;
+  width: 100%;
   position: absolute;
-  display: flex;
-  justify-content: space-between;
-  top: 50%;
+  top: 40%;
   transform: translateY(-50%);
 }
-.banner_container .left-right .lr_button {
+.banner_container .left-right .l_button, .banner_container .left-right .r_button {
   color: white;
   font-size: 2rem;
+  position: absolute;
 }
-.banner_container .left-right .lr_button svg {
+.banner_container .left-right .l_button svg, .banner_container .left-right .r_button svg {
   cursor: pointer;
   fill: #ffbd54;
   transition: 0.3s;
 }
-.banner_container .left-right .lr_button svg:hover {
-  fill: #ffbd54;
+.banner_container .left-right .l_button {
+  left: -0.7rem;
+}
+.banner_container .left-right .r_button {
+  right: -0.7rem;
 }
 
 .foto_meniu_container {
@@ -595,6 +598,7 @@
   grid-column: 1/4;
   padding-bottom: 1rem;
   font-weight: 500;
+  line-height: 1.6rem;
   color: #3D3D3D;
 }
 .korteles_container .visos_korteles {
@@ -608,10 +612,6 @@
     grid-template-columns: 1fr;
     padding-bottom: 16%;
   }
-}
-.korteles_container .visos_korteles .kortele {
-  height: -moz-fit-content;
-  height: fit-content;
 }
 .korteles_container .visos_korteles .kortele img {
   -o-object-fit: contain;
@@ -663,11 +663,9 @@
 }
 
 .pre_footer_container {
-  background-color: #f6f0ff;
   background-color: #fff1d6;
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: 19rem;
   gap: 2%;
   justify-content: center;
   padding: 5% 0 5%;
@@ -683,21 +681,6 @@
 @media (max-width: 480px) {
   .pre_footer_container {
     grid-auto-flow: row;
-  }
-}
-@media (max-width: 1200px) {
-  .pre_footer_container {
-    grid-auto-columns: 15.5rem;
-  }
-}
-@media (min-width: 481px) and (max-width: 768px) {
-  .pre_footer_container {
-    grid-auto-columns: 80%;
-  }
-}
-@media (max-width: 480px) {
-  .pre_footer_container {
-    grid-auto-columns: 22rem;
   }
 }
 @media (max-width: 1200px) {
@@ -775,10 +758,11 @@
   border: none;
   text-align: center;
   flex-basis: 100%;
+  margin-top: 3rem;
 }
 @media (min-width: 481px) and (max-width: 768px) {
   .pre_footer_container .pre_footer_section input {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
   }
 }
 .pre_footer_container .pre_footer_section .pre_footer_button {
@@ -796,7 +780,7 @@
   transition: 0.3s;
   font-family: "Wix Madefor Text", sans-serif;
   font-weight: 500;
-  margin: 1rem 0 3rem;
+  margin: 0.5rem 0 1rem;
 }
 @media (max-width: 480px) {
   .pre_footer_container .pre_footer_section .pre_footer_button {
@@ -816,21 +800,19 @@
   list-style-type: none;
   padding-top: 0.25rem;
   margin-left: 10%;
-  margin: 0 auto;
+  margin: 0 0 2rem;
 }
-@media (max-width: 480px) {
-  .pre_footer_container .pre_footer_section .pre_footer_media .media_icons {
-    margin: 0 0 2rem;
-  }
+.pre_footer_container .pre_footer_section .pre_footer_media .media_icons #contribee {
+  margin-right: -2rem;
 }
 .pre_footer_container .pre_footer_section .pre_footer_media .media_icons li {
-  margin: 0.2rem 10% 0 10%;
+  margin: 0.2rem 5% 0 5%;
 }
 .pre_footer_container .pre_footer_section .pre_footer_media .media_icons li svg {
   fill: #3D3D3D;
   transition: 0.3s;
 }
-.pre_footer_container .pre_footer_section .pre_footer_media .media_icons li svg:hover {
+.pre_footer_container .pre_footer_section .pre_footer_media .media_icons li:hover {
   fill: #ffbd54;
 }
 

@@ -141,25 +141,32 @@ $on-hover: #ffbd54;
         }
     }
     .left-right{
-        margin-left:-0.8rem ;
-        width: 103%;
+        width: 100%;
         position: absolute;
-        display: flex;
-        justify-content: space-between;
-        top:50%;
+        // display: flex;
+        // justify-content: space-between;
+        top:40%;
         transform: translateY(-50%);
-        .lr_button{
+        .l_button, .r_button{
             color: white;
             font-size: 2rem;
+            position: absolute;
             svg{
                 cursor: pointer;
                 fill: $on-hover;
                 transition: 0.3s;
             }
-            svg:hover{
-                fill: $on-hover;
-            }
+            // svg:hover{
+            //     fill: white;
+            // }
         }
+        .l_button{
+            left: -0.7rem
+        }
+        .r_button{
+            right: -0.7rem
+        }
+
 
     }
 }

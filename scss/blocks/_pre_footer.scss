@@ -3,7 +3,6 @@ $sviesi: #dbdfd3;
 $on-hover: #ffbd54;
 
 .pre_footer_container{
-    background-color: #f6f0ff;
     background-color: #fff1d6;
     display: grid;
     grid-auto-flow: column;
@@ -13,16 +12,16 @@ $on-hover: #ffbd54;
     @include phone {
         grid-auto-flow: row;
     }
-    grid-auto-columns: 19rem;
-    @include desktop {
-        grid-auto-columns: 15.5rem;
-    }
-    @include tablet {
-        grid-auto-columns: 80%;
-    }
-    @include phone {
-        grid-auto-columns: 22rem;
-    }
+    // grid-auto-columns: 19rem;
+    // @include desktop {
+    //     grid-auto-columns: 15.5rem;
+    // }
+    // @include tablet {
+    //     grid-auto-columns: 80%;
+    // }
+    // @include phone {
+    //     grid-auto-columns: 22rem;
+    // }
     gap: 2%;
     justify-content: center;
     padding: 5% 0 5%;
@@ -37,16 +36,12 @@ $on-hover: #ffbd54;
         font-size: 0.8rem;
         line-height: 0.8rem;
     }
-
-
     .pre_footer_section{
         text-align: center;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items:start;
-
-
         img{
             width:250px;
             @include desktop{
@@ -64,7 +59,6 @@ $on-hover: #ffbd54;
             @include phone {                
                 width: 100%;
             }
-
             @include tablet{
                 margin-top: 1rem;
                 margin-bottom:1rem;
@@ -73,7 +67,6 @@ $on-hover: #ffbd54;
                 margin-bottom:1rem;
             }
         }
-
         h3{
             font-family: 'Wix Madefor Text', sans-serif;
             font-weight: 500;
@@ -84,7 +77,6 @@ $on-hover: #ffbd54;
             }
             flex-basis: 100%;
         }
-
         input{
             max-width: 78%;
             align-self: flex-start;
@@ -92,10 +84,11 @@ $on-hover: #ffbd54;
             border: none;
             text-align: center;
             flex-basis: 100%; 
+            margin-top:3rem;
             @include tablet{
-                margin-top:1rem;
+                margin-top:0.5rem;
             }           
-        }
+        }        
         .pre_footer_button{
             align-self: flex-start;
             width: fit-content;
@@ -110,11 +103,10 @@ $on-hover: #ffbd54;
             transition: 0.3s;
             font-family: 'Wix Madefor Text', sans-serif;
             font-weight: 500;
-            margin: 1rem 0 3rem;
+            margin: 0.5rem 0 1rem;
             @include phone{
                 margin: 1rem 0 2rem;
             }
-
         }
         .pre_footer_button:hover{
             color: $on-hover;
@@ -129,23 +121,22 @@ $on-hover: #ffbd54;
                 list-style-type: none;               
                 padding-top: 0.25rem;
                 margin-left: 10%;
-                margin: 0 auto;
-                @include phone{
-                    margin: 0 0 2rem;
-                }   
+                margin: 0 0 2rem ;
+                #contribee{
+                    margin-right: -2rem;
+                }
     
                 li{
-                    margin: 0.2rem 10% 0 10%;
+                    margin: 0.2rem 5% 0 5%;
                     svg{
                         fill:$tamsi;  
                         transition: 0.3s;
                     }
-                    svg:hover{
+                    &:hover{
                         fill:$on-hover;
                     }
                 }
             }
         }
-
     }
 }
