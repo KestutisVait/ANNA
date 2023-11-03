@@ -18,7 +18,6 @@ if (naujienlaiskis){
         }   
     }
 }
-
 if(document.getElementById("scroll_right")){
     sliderControl("scroll_right", 1);
     sliderControl("scroll_left", -1);
@@ -52,11 +51,6 @@ document.getElementById("hamburger_meniu").addEventListener("click", function(){
         document.getElementsByClassName("banner_container")[0].classList.add("snap_point");
     })
 });
-
-document.getElementsByClassName("back_to_top")[0].addEventListener("click", function(){
-        window.scrollTo(0, 0);
-});
-
 var flag = true;
 /**
  * ijungia ir isjungia paslepta meniu
