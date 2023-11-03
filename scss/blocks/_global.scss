@@ -32,6 +32,7 @@
     overflow-y: scroll;
     overscroll-behavior-y: contain;
     overscroll-behavior-x: contain;
+    scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
     height: 100vh;
   }
