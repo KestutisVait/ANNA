@@ -3,7 +3,8 @@ $sviesi: #dbdfd3;
 $on-hover: #ffbd54;
 
 .pre_footer_container{
-    background-color: #e0edfe;
+    background-color: #f6f0ff;
+    background-color: #fff1d6;
     display: grid;
     grid-auto-flow: column;
     @include tablet {
@@ -104,7 +105,7 @@ $on-hover: #ffbd54;
             text-align: center;
             text-decoration: none;
             position: relative;
-            color: #fad3c8;
+            color: #ffffff;
             font-size: 0.7rem;
             transition: 0.3s;
             font-family: 'Wix Madefor Text', sans-serif;

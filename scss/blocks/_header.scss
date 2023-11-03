@@ -29,11 +29,11 @@ $on-hover: #ffbd54;
                 background-color: $tamsi;
                 margin-left: auto;
                 display: flex;
-                // visibility: hidden; 
+                // visibility: hidden;    // <--- palikti isjungta kol nebaigtas funkcionalumas
                 #krepselio_sk{
                     color: white;
                     padding: 0 0.3rem;
-                    font-size: 1.1rem;
+                    font-size: 17px;
                 }
                 svg{
                     cursor: pointer;
@@ -89,9 +89,9 @@ $on-hover: #ffbd54;
                     svg{
                         fill:$tamsi
                     }
-                // svg:hover{
-                //     fill:$on-hover
-                // }
+                svg:hover{
+                    fill:$on-hover
+                }
             }
             .drop_menu{
                 position: relative;
@@ -129,9 +129,7 @@ $on-hover: #ffbd54;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                li{
-                    margin-left: -3.1rem;    
-                }
+                margin-left: -3rem;    
             }
         }        
     }

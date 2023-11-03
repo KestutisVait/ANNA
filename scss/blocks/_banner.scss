@@ -141,19 +141,19 @@ $on-hover: #ffbd54;
         }
     }
     .left-right{
-        width: 100%;
+        margin-left:-0.8rem ;
+        width: 103%;
         position: absolute;
         display: flex;
         justify-content: space-between;
         top:50%;
         transform: translateY(-50%);
         .lr_button{
-            margin: 0.2rem;
             color: white;
             font-size: 2rem;
             svg{
                 cursor: pointer;
-                fill: $tamsi;
+                fill: $on-hover;
                 transition: 0.3s;
             }
             svg:hover{

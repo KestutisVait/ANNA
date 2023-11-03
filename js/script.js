@@ -1,6 +1,5 @@
 
 let naujienlaiskis = document.getElementById("e-mail");
-// console.log(naujienlaiskis);
 if (naujienlaiskis){
     naujienlaiskis.addEventListener("click", () => naujienlaiskis.value = "");// paspaudus ant laukelio isnuksta tekstas, rasoma is naujo
     document.getElementsByClassName("pre_footer_button")[0].addEventListener("click", tikrintiEmaila);
@@ -16,36 +15,41 @@ if (naujienlaiskis){
         }   
     }
 }
-// mygtuku eventai karuselei. pastumia kairen ir desinen.
+
 if(document.getElementById("scroll_right")){
-    document.getElementById("scroll_right").addEventListener("click", function(){
+    sliderControl("scroll_right", 1);
+    sliderControl("scroll_left", -1);
+}
+/**
+ * uzdeda mygtukui eventListener ir
+ * kontroliuoja i kuria puse stumiasi karusele
+ * @param {string} scroll_direction element id
+ * @param {number} amount 1 | -1
+ * @example sliderControl("scroll_left", -1)
+ */
+function sliderControl(scroll_direction, amount){
+    document.getElementById(scroll_direction).addEventListener("click", function(){
         document.getElementById("slider").scrollBy({
-            left: 1,
-            behavior: "smooth"
-        })  
-    })
-    document.getElementById("scroll_left").addEventListener("click", function(){
-        document.getElementById("slider").scrollBy({
-            left: -1,
+            left: amount,
             behavior: "smooth"
         })  
     })
 }
-document.getElementById("hamburger_meniu").addEventListener("click", meniuOff)
-
+document.getElementById("hamburger_meniu").addEventListener("click", meniuOff);
 flag = true;
-
 function meniuOff(){
     let hamburger = document.getElementById("hamburger_meniu");
-    if(hamburger.inn = flag){
-        document.getElementsByClassName("drop_content")[0].style.display = "flex";
-        // document.getElementById("hamburger_icon").style.fill = "$on-hover";
-        document.getElementsByClassName("nav")[0].style.paddingBottom = "10rem";
-
+    let mygtukai = document.getElementsByClassName("drop_content")[0];
+    let menu = document.getElementsByClassName("nav")[0]; 
+    if(hamburger = flag){
+        mygtukai.style.display = "flex";
+        mygtukai.style.flexDirection = "column";
+        mygtukai.style.alignItems = "center";
+        mygtukai.style.marginLeft = "-3.1rem";
+        menu.style.paddingBottom = "10rem";
     }else{
-        document.getElementsByClassName("drop_content")[0].style.display = "none";
-        // document.getElementById("hamburger_icon").style.fill = "$tamsi";
-        document.getElementsByClassName("nav")[0].style.paddingBottom = "0";
+        mygtukai.style.display = "none";
+        menu.style.paddingBottom = "0";
     }
     flag = !flag;
 }
