@@ -53,8 +53,9 @@ document.getElementById("hamburger_meniu").addEventListener("click", function(){
     })
 });
 
-// document.getElementById("hamburger_meniu").addEventListener("mouseup", function(){
-// });
+document.getElementsByClassName("back_to_top")[0].addEventListener("click", function(){
+        window.scrollTo(0, 0);
+});
 
 var flag = true;
 /**

@@ -12,6 +12,7 @@
     overscroll-behavior-y: contain;
     overscroll-behavior-x: contain;
     scroll-behavior: smooth;
+    scroll-snap-stop: always;
     scroll-snap-type: y mandatory;
     height: 100vh;
   }
@@ -26,6 +27,7 @@
     overscroll-behavior-y: contain;
     overscroll-behavior-x: contain;
     scroll-behavior: smooth;
+    scroll-snap-stop: always;
     scroll-snap-type: y mandatory;
     height: 100vh;
   }
