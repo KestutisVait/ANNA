@@ -125,12 +125,12 @@ $on-hover: #ffbd54;
                     }
                 }
             }
-            .drop_menu:hover .drop_content {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                margin-left: -3rem;    
-            }
+            // .drop_menu:hover .drop_content {
+            //     display: flex;
+            //     flex-direction: column;
+            //     align-items: center;
+            //     margin-left: -3rem;    
+            // }
         }        
     }
     .nav:hover {

@@ -39,6 +39,20 @@ function sliderControl(scroll_direction, amount){
     })
 }
 document.getElementById("hamburger_meniu").addEventListener("click", meniuOff);
+document.getElementById("hamburger_meniu").addEventListener("click", function(){
+    document.getElementsByClassName("banner_container")[0].classList.remove("snap_point");
+    window.scrollTo(0, 0);//reikia pasizaisti, paspaudus turi atvaziuot i ekrano virsu
+    document.addEventListener("wheel", function(){
+        document.getElementsByClassName("banner_container")[0].classList.add("snap_point");
+    })
+    document.addEventListener("touchmove", function(){
+        document.getElementsByClassName("banner_container")[0].classList.add("snap_point");
+    })
+});
+
+// document.getElementById("hamburger_meniu").addEventListener("mouseup", function(){
+// });
+
 var flag = true;
 /**
  * ijungia ir isjungia paslepta meniu
