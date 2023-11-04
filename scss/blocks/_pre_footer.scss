@@ -26,8 +26,8 @@ $on-hover: #ffbd54;
         font-size: 0.8rem;
         line-height: 0.8rem;
     }
-    @include laptop{
-        padding: 5%;
+    @include phone{
+        padding-bottom: 10%;
     }
     .pre_footer_section{
         text-align: center;
@@ -122,14 +122,11 @@ $on-hover: #ffbd54;
                     svg{
                         fill:$tamsi;  
                         transition: 0.3s;
-                    }
-                    &:hover{
-                        fill:$on-hover;
+                        &:hover{
+                            fill: #dc9627;
+                        }
                     }
                 }
-                // &:nth-child(1){
-                //     padding-r
-                // }
             }
         }
     }
