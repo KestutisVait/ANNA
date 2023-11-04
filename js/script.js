@@ -41,15 +41,19 @@ function sliderControl(scroll_direction, amount){
 document.getElementById("hamburger_meniu").addEventListener("click", meniuOff);
 document.getElementById("hamburger_meniu").addEventListener("click", function(){
     document.getElementsByClassName("banner_container")[0].classList.remove("snap_point");
+    document.getElementsByClassName("nav")[0].classList.add("snap_point");
+    window.scrollBy(0, -10);
     // window.scrollTo(0, 0);
-    document.getElementsByClassName("last")[0].scrollIntoView({
-        behavior: 'smooth'
-    })
-    document.addEventListener("wheel", function(){
-        document.getElementsByClassName("banner_container")[0].classList.add("snap_point");
-    })
-    document.addEventListener("touchmove", function(){
-        document.getElementsByClassName("banner_container")[0].classList.add("snap_point");
+    // document.getElementsByClassName("last")[0].scrollIntoView({
+        //     behavior: 'smooth'
+        // })
+        document.addEventListener("wheel", function(){
+            document.getElementsByClassName("banner_container")[0].classList.add("snap_point");
+            document.getElementsByClassName("nav")[0].classList.remove("snap_point");
+        })
+        document.addEventListener("touchmove", function(){
+            document.getElementsByClassName("banner_container")[0].classList.add("snap_point");
+            document.getElementsByClassName("nav")[0].classList.remove("snap_point");
     })
 });
 var flag = true;

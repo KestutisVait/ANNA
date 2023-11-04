@@ -99,6 +99,7 @@
   display: flex;
   justify-content: center;
   transition: 0.3s;
+  scroll-snap-align: end;
 }
 @media (max-width: 480px) {
   .grid_container .main_nav .nav .full {
