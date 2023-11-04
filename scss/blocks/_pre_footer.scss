@@ -14,7 +14,7 @@ $on-hover: #ffbd54;
     }
     gap: 2%;
     justify-content: center;
-    padding: 5% 0 5%;
+    padding: 5%;
     letter-spacing: 0.2rem;
     line-height: 1rem;
     font-size: 1rem;
@@ -113,14 +113,12 @@ $on-hover: #ffbd54;
                 text-decoration: none;
                 list-style-type: none;               
                 padding-top: 0.25rem;
-                margin-left: 10%;
-                margin: 0 0 2rem ;
-                #contribee{
-                    margin-right: -2rem;
-                }
-    
+                transform: translatex(-10px);
+                #contribee1{
+                    margin-right: -5rem;
+                }    
                 li{
-                    margin: 0.2rem 5% 0 5%;
+                    margin: 0.2rem 5% 0 0;
                     svg{
                         fill:$tamsi;  
                         transition: 0.3s;
@@ -129,6 +127,9 @@ $on-hover: #ffbd54;
                         fill:$on-hover;
                     }
                 }
+                // &:nth-child(1){
+                //     padding-r
+                // }
             }
         }
     }

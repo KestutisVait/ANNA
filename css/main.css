@@ -662,7 +662,7 @@
   grid-auto-flow: column;
   gap: 2%;
   justify-content: center;
-  padding: 5% 0 5%;
+  padding: 5%;
   letter-spacing: 0.2rem;
   line-height: 1rem;
   font-size: 1rem;
@@ -798,14 +798,13 @@
   text-decoration: none;
   list-style-type: none;
   padding-top: 0.25rem;
-  margin-left: 10%;
-  margin: 0 0 2rem;
+  transform: translatex(-10px);
 }
-.pre_footer_container .pre_footer_section .pre_footer_media .media_icons #contribee {
-  margin-right: -2rem;
+.pre_footer_container .pre_footer_section .pre_footer_media .media_icons #contribee1 {
+  margin-right: -5rem;
 }
 .pre_footer_container .pre_footer_section .pre_footer_media .media_icons li {
-  margin: 0.2rem 5% 0 5%;
+  margin: 0.2rem 5% 0 0;
 }
 .pre_footer_container .pre_footer_section .pre_footer_media .media_icons li svg {
   fill: #3D3D3D;
