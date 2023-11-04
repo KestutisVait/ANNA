@@ -3,7 +3,7 @@ $sviesi: #dbdfd3;
 $on-hover: #ffbd54;
 
 .pre_footer_container{
-    background-color: #fff1d6;
+    background-color: #e7e9e2;
     display: grid;
     grid-auto-flow: column;
     @include tablet {
@@ -12,16 +12,6 @@ $on-hover: #ffbd54;
     @include phone {
         grid-auto-flow: row;
     }
-    // grid-auto-columns: 19rem;
-    // @include desktop {
-    //     grid-auto-columns: 15.5rem;
-    // }
-    // @include tablet {
-    //     grid-auto-columns: 80%;
-    // }
-    // @include phone {
-    //     grid-auto-columns: 22rem;
-    // }
     gap: 2%;
     justify-content: center;
     padding: 5% 0 5%;
@@ -35,6 +25,9 @@ $on-hover: #ffbd54;
     @include laptop{
         font-size: 0.8rem;
         line-height: 0.8rem;
+    }
+    @include laptop{
+        padding: 5%;
     }
     .pre_footer_section{
         text-align: center;
@@ -136,6 +129,13 @@ $on-hover: #ffbd54;
                         fill:$on-hover;
                     }
                 }
+            }
+        }
+    }
+    .section1{
+        @include phone{
+            h3{
+                margin-bottom: 0;
             }
         }
     }

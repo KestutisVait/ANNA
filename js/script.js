@@ -39,22 +39,9 @@ function sliderControl(scroll_direction, amount){
     })
 }
 document.getElementById("hamburger_meniu").addEventListener("click", meniuOff);
+//overrides snap
 document.getElementById("hamburger_meniu").addEventListener("click", function(){
-    // document.getElementsByClassName("banner_container")[0].classList.remove("snap_point");
     document.getElementsByClassName("wrapper")[0].scrollTo(0, 0);
-    // const el = document.getElementById("last");
-    // const pos = el.getBoundingClientRect();
-    // const wrapp = document.getElementsByClassName("wrapper")[0];
-    // wrapp.scrollTo(0, pos.top);
-    // document.getElementsByClassName("nav")[0].classList.add("snap_point");
-    //     document.addEventListener("wheel", function(){
-    //         document.getElementsByClassName("banner_container")[0].classList.add("snap_point");
-    //         document.getElementsByClassName("nav")[0].classList.remove("snap_point");
-    //     })
-    //     document.addEventListener("touchmove", function(){
-    //         document.getElementsByClassName("banner_container")[0].classList.add("snap_point");
-    //         document.getElementsByClassName("nav")[0].classList.remove("snap_point");
-    // })
 });
 var flag = true;
 /**

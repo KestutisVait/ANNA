@@ -18,7 +18,7 @@ $on-hover: #ffbd54;
         color: $sviesi;
         @include tablet{
             order: 1;
-            width: 70%
+            width: 60%
         } 
         @include phone{
             order: 2;
@@ -39,6 +39,7 @@ $on-hover: #ffbd54;
         text-decoration: none;
         display: flex;
         justify-content: end;
+        font-size: 1.2rem;
         @include tablet{
             order: 2;
         }
@@ -51,5 +52,9 @@ $on-hover: #ffbd54;
     }
     .back_to_top:hover{
         color: $on-hover;
+        svg{
+            stroke: $on-hover
+        }
+
     }
 }
