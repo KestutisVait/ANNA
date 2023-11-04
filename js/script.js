@@ -40,21 +40,21 @@ function sliderControl(scroll_direction, amount){
 }
 document.getElementById("hamburger_meniu").addEventListener("click", meniuOff);
 document.getElementById("hamburger_meniu").addEventListener("click", function(){
-    document.getElementsByClassName("banner_container")[0].classList.remove("snap_point");
-    document.getElementsByClassName("nav")[0].classList.add("snap_point");
-    window.scrollBy(0, -10);
-    // window.scrollTo(0, 0);
-    // document.getElementsByClassName("last")[0].scrollIntoView({
-        //     behavior: 'smooth'
-        // })
-        document.addEventListener("wheel", function(){
-            document.getElementsByClassName("banner_container")[0].classList.add("snap_point");
-            document.getElementsByClassName("nav")[0].classList.remove("snap_point");
-        })
-        document.addEventListener("touchmove", function(){
-            document.getElementsByClassName("banner_container")[0].classList.add("snap_point");
-            document.getElementsByClassName("nav")[0].classList.remove("snap_point");
-    })
+    // document.getElementsByClassName("banner_container")[0].classList.remove("snap_point");
+    document.getElementsByClassName("wrapper")[0].scrollTo(0, 0);
+    // const el = document.getElementById("last");
+    // const pos = el.getBoundingClientRect();
+    // const wrapp = document.getElementsByClassName("wrapper")[0];
+    // wrapp.scrollTo(0, pos.top);
+    // document.getElementsByClassName("nav")[0].classList.add("snap_point");
+    //     document.addEventListener("wheel", function(){
+    //         document.getElementsByClassName("banner_container")[0].classList.add("snap_point");
+    //         document.getElementsByClassName("nav")[0].classList.remove("snap_point");
+    //     })
+    //     document.addEventListener("touchmove", function(){
+    //         document.getElementsByClassName("banner_container")[0].classList.add("snap_point");
+    //         document.getElementsByClassName("nav")[0].classList.remove("snap_point");
+    // })
 });
 var flag = true;
 /**
@@ -63,14 +63,17 @@ var flag = true;
 function meniuOff(){
     let hamburger = document.getElementById("hamburger_meniu");
     let mygtukai = document.getElementsByClassName("drop_content")[0];
+    let wrapp = document.body;
     let menu = document.getElementsByClassName("nav")[0]; 
     if(hamburger = flag){
+        wrapp.style.overflowY = "hidden";
         mygtukai.style.display = "flex";
         mygtukai.style.flexDirection = "column";
         mygtukai.style.alignItems = "center";
-        mygtukai.style.marginLeft = "-3.1rem";
+        mygtukai.style.marginLeft = "-3rem";
         menu.style.paddingBottom = "10rem";
     }else{
+        wrapp.style.overflowY = "hidden";
         mygtukai.style.display = "none";
         menu.style.paddingBottom = "0";
     }

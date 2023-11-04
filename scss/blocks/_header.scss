@@ -55,7 +55,7 @@ $on-hover: #ffbd54;
             list-style-type: none;
             display: flex;
             justify-content: center;
-            transition: 0.3s;
+            transition: 0.5s;
             scroll-snap-align: end;
             .full{
                 @include phone {
@@ -76,8 +76,7 @@ $on-hover: #ffbd54;
                 @include phone {
                     margin: 0.4rem 2% 0.6rem;
                     letter-spacing: 0.2rem;
-                }
-                
+                }                
                 a {
                     color: $tamsi;
                     text-decoration: none;
@@ -114,7 +113,7 @@ $on-hover: #ffbd54;
                     }
                 }
                 .dropdown_menu {
-                    animation: growDown 0.3s ease-in-out forwards;
+                    animation: growDown 0.5s ease-in-out forwards;
                     transform-origin: top center;
                 }
                 @keyframes growDown {
@@ -126,17 +125,6 @@ $on-hover: #ffbd54;
                     }
                 }
             }
-            // .drop_menu:hover .drop_content {
-            //     display: flex;
-            //     flex-direction: column;
-            //     align-items: center;
-            //     margin-left: -3rem;    
-            // }
         }        
-    }
-    .nav:hover {
-        @include phone {
-            padding-bottom: 10rem;
-        }
     }
 }

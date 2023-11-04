@@ -98,7 +98,7 @@
   list-style-type: none;
   display: flex;
   justify-content: center;
-  transition: 0.3s;
+  transition: 0.5s;
   scroll-snap-align: end;
 }
 @media (max-width: 480px) {
@@ -163,7 +163,7 @@
   padding-top: 0.9rem;
 }
 .grid_container .main_nav .nav .drop_menu .dropdown_menu {
-  animation: growDown 0.3s ease-in-out forwards;
+  animation: growDown 0.5s ease-in-out forwards;
   transform-origin: top center;
 }
 @keyframes growDown {
@@ -172,11 +172,6 @@
   }
   100% {
     transform: scaleY(1);
-  }
-}
-@media (max-width: 480px) {
-  .grid_container .nav:hover {
-    padding-bottom: 10rem;
   }
 }
 
