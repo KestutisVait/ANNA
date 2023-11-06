@@ -81,6 +81,9 @@ $on-hover: #ffbd54;
             @include tablet{
                 margin-top:0.5rem;
             }           
+            @include phone{
+                margin-top:0.5rem;
+            }           
         }
         #atsiliepimai{
             margin: 0 0 0.5rem;
@@ -90,10 +93,10 @@ $on-hover: #ffbd54;
             padding: 1rem;
             font-size: 1rem;
             @include tablet{
-                margin: 0.5rem  0;
+                margin: 0.5rem 0 0;
             }
             @include phone{
-                margin: 0.5rem  0;
+                margin: 0.5rem 0 0;
             }
         }        
         .pre_footer_button{

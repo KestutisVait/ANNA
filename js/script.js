@@ -2,7 +2,7 @@
 let naujienlaiskis = document.getElementById("e-mail");
 if (naujienlaiskis){
     naujienlaiskis.addEventListener("click", () => naujienlaiskis.value = "");// paspaudus ant laukelio isnyksta tekstas, rasoma is naujo
-    document.getElementsByClassName("pre_footer_button")[0].addEventListener("click", tikrintiEmaila);
+    document.getElementsByClassName("pre_footer_button")[1].addEventListener("click", tikrintiEmaila);
     /**
      * tikrinti ar ivestas tekstas yra el pastas.
      */
@@ -10,8 +10,8 @@ if (naujienlaiskis){
         let regex = /.+(\W)?.*@\w+\.\w+/ig// regex sablonas tikrinti el pasto strukturai
         let txt = document.getElementById("e-mail");
         if (regex.test(txt.value)){ // jei ivestas tekstas atitinka regex sablona tada el pasto adresasa suformuluotas teisingai
-            //cia bus kodas siunciantis al pasto adresa i duombaze
-            document.getElementById("e-mail").style.backgroundColor = "#bcd217"// jei neteisingai ,nuspalvinu laukeli rausvai (klaida!).
+            //cia bus kodas siunciantis el pasto adresa i duombaze
+            document.getElementById("e-mail").style.backgroundColor = "#bcd217"// jei neteisingai ,nuspalvinu laukeli zalsvai.
             txt.value = "Adresas tinka!"
         }else{
             document.getElementById("e-mail").style.backgroundColor = "#fad3c8"// jei neteisingai ,nuspalvinu laukeli rausvai (klaida!).
