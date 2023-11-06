@@ -70,7 +70,7 @@ $on-hover: #ffbd54;
             }
             flex-basis: 100%;
         }
-        input{
+        input, #atsiliepimai{
             max-width: 78%;
             align-self: flex-start;
             height: 2rem;
@@ -81,6 +81,14 @@ $on-hover: #ffbd54;
             @include tablet{
                 margin-top:0.5rem;
             }           
+        }
+        #atsiliepimai{
+            margin: 0 0 1rem ;
+            height: 10rem;
+            text-align: start;
+            text-indent: 2rem;
+            padding: 1rem;
+            font-size: 1rem;
         }        
         .pre_footer_button{
             align-self: flex-start;

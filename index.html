@@ -4,8 +4,9 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="css/main.css" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
+        <link rel="stylesheet" href="css/normalize.css">
         <link
             href="https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@700&display=swap"
             rel="stylesheet"
@@ -94,7 +95,7 @@
                     </ul>
                 </div>
                 <div class="logo" id="last">
-                    <img src="./img/ANNA.svg" height="150" alt="" />
+                    <img src="./img/ANNA.svg" height="150" alt="anna logotipas" />
                 </div>
                 <nav class="main_nav">
                     <ul class="nav" >
@@ -265,15 +266,15 @@
 
                 <div class="foto_meniu_container">
                     <div class="foto_meniu_item snap_point">
-                        <img src="./img/Womens-circle.jpeg" alt="" />
+                        <img src="./img/Womens-circle.jpeg" alt="women laying in circle" />
                         <a href="#" class="foto_meniu_button">RENGINIAI</a>
                     </div>
                     <div class="foto_meniu_item snap_point">
-                        <img src="./img/Coaching.jpg" alt="" />
+                        <img src="./img/Coaching.jpg" alt="two women talking" />
                         <a href="#" class="foto_meniu_button">KOUČINGAS</a>
                     </div>
                     <div class="foto_meniu_item snap_point">
-                        <img src="./img/paslaugos.jpg" alt="" />
+                        <img src="./img/paslaugos.jpg" alt="group of people talking" />
                         <a href="#" class="foto_meniu_button">PASLAUGOS</a>
                     </div>
                 </div>
@@ -298,19 +299,19 @@
                     <h3>CIA BUS KAZKOKIA ANTRASTE</h3>
                     <div class="visos_korteles">
                         <div class="kortele snap_point">
-                            <img src="./img/Coaching.jpg" alt="" />
+                            <img src="./img/Coaching.jpg" alt="two women talking" />
                             <div class="kortele_button">
                                 <a href="#">MYGTUKAS SU ANTRASTE</a>
                             </div>
                         </div>
                         <div class="kortele snap_point">
-                            <img src="./img/paslaugos.jpg" alt="" />
+                            <img src="./img/paslaugos.jpg" alt="group of people talking" />
                             <div class="kortele_button">
                                 <a href="#">MYGTUKAS SU ANTRASTE</a>
                             </div>
                         </div>
                         <div class="kortele snap_point">
-                            <img src="./img/Womens-circle.jpeg" alt="" />
+                            <img src="./img/Womens-circle.jpeg" alt="women laying in circle" />
                             <div class="kortele_button">
                                 <a href="#">MYGTUKAS SU ANTRASTE</a>
                             </div>
@@ -323,7 +324,7 @@
                 <div class="pre_footer_container" >
                     <div class="pre_footer_section section1">
                         <h3>ANTRASTE</h3>
-                        <img  src="./img/ANNA.svg" alt="" />
+                        <img  src="./img/ANNA.svg" alt="anna logotipas" />
                         <p>
                             Lorem ipsum dolor, sit amet consectetur adipisicing
                             elit. Beatae repudiandae voluptatum temporibus
@@ -332,14 +333,9 @@
                         </p>
                     </div>
                     <div class="pre_footer_section section2 snap_point">
-                        <h3>ANTRASTE</h3>
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing
-                            elit. Harum mollitia deleniti, id numquam corporis
-                            commodi exercitationem ex voluptatem magni nam,
-                            excepturi expedita animi cum ratione officiis. Sint
-                            doloribus sapiente aliquam?
-                        </p>
+                        <h3>PALIKITE ATSILIEPIMĄ</h3>
+                        <!-- <input type="text" id="atsiliepimai" name="atsiliepimai" maxlength="200"> -->
+                        <textarea rows="10" id="atsiliepimai"></textarea>
                     </div>
                     <div class="pre_footer_section section3">
                         <h3>GAUKITE NAUJIENLAIŠKĮ</h3>
@@ -351,7 +347,8 @@
                             id="e-mail"
                             type="text"
                             value="El. paštas"
-                            title="e-mail"
+                            name="e-mail"
+                            maxlength="40"
                         />
                         <a href="#" class="pre_footer_button snap_point">REGISTRUOTIS</a>
                         <div class="pre_footer_media">
