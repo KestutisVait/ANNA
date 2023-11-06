@@ -772,6 +772,16 @@
   padding: 1rem;
   font-size: 1rem;
 }
+@media (min-width: 481px) and (max-width: 768px) {
+  .pre_footer_container .pre_footer_section #atsiliepimai {
+    margin: 0.5rem 0;
+  }
+}
+@media (max-width: 480px) {
+  .pre_footer_container .pre_footer_section #atsiliepimai {
+    margin: 0.5rem 0;
+  }
+}
 .pre_footer_container .pre_footer_section .pre_footer_button {
   align-self: flex-start;
   width: -moz-fit-content;
@@ -788,6 +798,11 @@
   font-family: "Wix Madefor Text", sans-serif;
   font-weight: 500;
   margin: 0.5rem 0 1rem;
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .pre_footer_container .pre_footer_section .pre_footer_button {
+    margin: 0.5rem 3rem;
+  }
 }
 @media (max-width: 480px) {
   .pre_footer_container .pre_footer_section .pre_footer_button {

@@ -89,6 +89,12 @@ $on-hover: #ffbd54;
             text-indent: 2rem;
             padding: 1rem;
             font-size: 1rem;
+            @include tablet{
+                margin: 0.5rem  0;
+            }
+            @include phone{
+                margin: 0.5rem  0;
+            }
         }        
         .pre_footer_button{
             align-self: flex-start;
@@ -105,6 +111,9 @@ $on-hover: #ffbd54;
             font-family: 'Wix Madefor Text', sans-serif;
             font-weight: 500;
             margin: 0.5rem 0 1rem;
+            @include tablet{
+                margin: 0.5rem 3rem;
+            }
             @include phone{
                 margin: 1rem 0 2rem;
             }
